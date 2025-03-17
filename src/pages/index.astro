@@ -1,31 +1,16 @@
 ---
-import Welcome from '../components/Welcome.astro';
-const pageTitle = "Home";
+import BaseLayout from '../layouts/BaseLayout.astro';
+const pageTitle = "Home Page";
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>{pageTitle}</title>
-	</head>
-	<body>
-		<a href="/">Home</a>
-		<a href="/about/">About</a>
-		<a href="/blog/">Blog</a>
-		<Welcome />
-	</body>
-</html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+<BaseLayout pageTitle={pageTitle}>
+  <h1>Welcome to my awesome blog</h1>
+  <p>This is where I will post about my journey learning Astro.</p>
+  <ul>
+	<li><a href="/blog/posts/post-1">Post 1</a></li>
+	<li><a href="/blog/posts/post-2">Post 2</a></li>
+	<li><a href="/blog/posts/post-3">Post 3</a></li>
+  </ul>
+	<h2>My awesome blog subtitle</h2>
+</BaseLayout>
